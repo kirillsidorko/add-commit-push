@@ -4,7 +4,7 @@ import sys
 commit_command = 'git commit -m "Update files"'
 force = False
 
-# Check the command line arguments for a custom commit message
+# Checks the command line arguments for a custom commit message
 if len(sys.argv) == 3 and sys.argv[1] == '-m':
     commit_command = f'git commit -m "{sys.argv[2]}"'
 
@@ -19,7 +19,7 @@ for x in range(len(sys.argv)):
 
 print(force)
 
-# Prompt the user for confirmation
+# Prompts the user for confirmation
 if not force:
     print("Continue with add, commit, push? (y):")
     userInput = input()
@@ -27,7 +27,7 @@ if not force:
         print('Canceling program')
         quit()
 
-# Execute Git commands with error handling
+# Executes Git commands with error handling
 try:
     print('\ngit add -A')
     os.system('git add -A')
